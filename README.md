@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ## 📖 Uso
 
 ```bash
-python upload_env_to_appconfig.py \
+python main.py \
   --appconfig-name <STORE_NAME> \
   --env-file      <CAMINHO_PARA_.env> \
   --prefix        <PREFIXO> \
@@ -66,11 +66,11 @@ python upload_env_to_appconfig.py \
 ## 📝 Exemplo
 
 ```bash
-python upload_env_to_appconfig.py \
+python main.py \
   --appconfig-name meu-appconfig \
   --env-file      .env \
-  --prefix        prod \
-  --label         v1.2 \
+  --prefix        meu-produto \
+  --label         dev \
   --config        config.json
 ```
 

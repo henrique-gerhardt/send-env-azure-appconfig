@@ -14,7 +14,7 @@ Lê o .env, formata as chaves, e faz set_configuration_setting em cada par.
 
 import argparse, json, os
 from azure.identity import ClientSecretCredential
-from azure.appconfiguration import AzureAppConfigurationClient
+from azure.appconfiguration import AzureAppConfigurationClient, ConfigurationSetting
 
 def load_config(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -56,11 +56,15 @@ def main():
     prefix = args.prefix.strip('/')
     for key, val in envs.items():
         key_name = f"{prefix}/{key}" if prefix else key
-        client.set_configuration_setting(
+
+        setting = ConfigurationSetting(
             key=key_name,
             label=args.label,
             value=val
         )
+
+        client.set_configuration_setting(setting)
+
         print(f"✔ Publicado: {key_name}  label={args.label or '<none>'}")
 
 if __name__ == '__main__':
