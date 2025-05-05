@@ -1,4 +1,4 @@
-# upload-env-to-appconfig
+# Upload .env to Azure AppConfig
 Sincronize seu `.env` local com o Azure App Configuration de forma simples e automatizada!
 
 ---
@@ -24,6 +24,19 @@ Sincronize seu `.env` local com o Azure App Configuration de forma simples e aut
 git clone https://github.com/seu-usuario/upload-env-to-appconfig.git
 cd upload-env-to-appconfig
 pip install -r requirements.txt
+```
+
+---
+
+## 🔐 Autenticação
+
+```json
+{
+  // Tenant, Client e Secret da sua AAD App Registration com função "App Configuration Data Owner" ou similar
+  "tenant_id": "<SEU_TENANT_ID>",
+  "client_id": "<SEU_CLIENT_ID>",
+  "client_secret": "<SEU_CLIENT_SECRET>"
+}
 ```
 
 ---
