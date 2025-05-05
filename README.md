@@ -1,4 +1,5 @@
 # Upload .env to Azure AppConfig
+
 Sincronize seu `.env` local com o Azure App Configuration de forma simples e automatizada!
 
 ---
