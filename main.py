@@ -49,7 +49,7 @@ def main():
 
     endpoint = f"https://{args.appconfig_name}.azconfig.io"
 
-    client = AzureAppConfigurationClient(endpoint, credential)  # :contentReference[oaicite:0]{index=0}
+    client = AzureAppConfigurationClient(endpoint, credential)
 
     envs = parse_env(args.env_file)
 
